@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 
-import path from 'path';
+// import path from 'path';
 
 import { Command } from 'commander';
 
 import createStarterWidgetTemplate from '../../services/widgetTemplate/widgetTemplateCreate/createStarterTemplate';
 import { log, messages } from '../../messages';
-import startWidgetBuilder from '../../server';
+// import startWidgetBuilder from '../../server';
 
 const createStarterTemplate = () => {
     const program = new Command('create');
@@ -25,9 +25,9 @@ const createStarterTemplate = () => {
             }
 
             try {
-                const widgetTemplateDir = path.resolve(`./${name}`);
                 createStarterWidgetTemplate.generate(name);
-                startWidgetBuilder(widgetTemplateDir, { autoOpen: true });
+                // const widgetTemplateDir = path.resolve(`./${name}`);
+                // startWidgetBuilder(widgetTemplateDir, { autoOpen: true });
             } catch (e) {
                 log.error(e.message);
             }
