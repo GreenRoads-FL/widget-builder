@@ -28,5 +28,3 @@ RUN npm run install-cli
 WORKDIR /usr/src/widgets
 
 ENTRYPOINT ["widget-builder"]
-
-EXPOSE 3000
